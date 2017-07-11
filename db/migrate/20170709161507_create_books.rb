@@ -4,7 +4,6 @@ class CreateBooks < ActiveRecord::Migration[5.1]
       t.belongs_to :author, index:true
       t.integer :user_id
       t.datetime :published_at
-      t.integer :noOfAuthors
       t.string :abstract
       t.integer :noOfPages
 

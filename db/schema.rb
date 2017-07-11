@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20170709161821) do
     t.integer "author_id"
     t.integer "user_id"
     t.datetime "published_at"
-    t.integer "noOfAuthors"
     t.string "abstract"
     t.integer "noOfPages"
     t.datetime "created_at", null: false
