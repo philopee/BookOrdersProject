@@ -1,32 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<ul>
-<table>
-  <thead>
-    <tr>
-      <h1>Order a Book</h1>
-      <h3>This is a simple and convenient way to buy or sell books online!</h3>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1>Order a Book</h1>
+<h3>This is a simple and convenient way to buy or sell books online!</h3>
 
-  <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= link_to 'Show User', user %></td>
+
+        <h2><%=link_to user.name, user_path(user)%></h2>
 
         <% user.books.each do |book|%>
           <table>
-            <tr><td><%= book.abstract%></td></tr>
+            <tr><td><%= link_to book.abstract, book_path(book)%></td></tr>
           </table>
         <%end%>
-      </tr>
     <% end %>
-  </tbody>
-</table>
 
 
-<%= link_to 'Add a Book to the database', new_book_path %><br>
+<%= link_to 'Add a Book to the Database', new_book_path %><br>
 <%= link_to 'Create a new Author', new_user_path %>
