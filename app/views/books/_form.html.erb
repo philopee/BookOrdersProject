@@ -12,18 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :book_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :user_id %>
     <%= form.number_field :user_id, id: :book_user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :published_at %>
-    <%= form.datetime_select :published_at, id: :book_published_at %>
   </div>
 
   <div class="field">
@@ -32,7 +22,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :noOfPages %>
+    <%= form.label :published_at %>
+    <%= form.datetime_select :published_at, id: :book_published_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Number of Pages' %>
     <%= form.number_field :noOfPages, id: :book_noOfPages %>
   </div>
 

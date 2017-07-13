@@ -1,18 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Id:</strong>
-  <%= @book.id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @book.user_id %>
-</p>
-
-<p>
-  <strong>Published at:</strong>
-  <%= @book.published_at %>
+  <strong>Author: </strong>
+  <%= @book.user.name %>
 </p>
 
 <p>
@@ -21,9 +11,14 @@
 </p>
 
 <p>
-  <strong>Noofpages:</strong>
+  <strong>Published at:</strong>
+  <%= @book.published_at %>
+</p>
+
+<p>
+  <strong>Number of Pages:</strong>
   <%= @book.noOfPages %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Edit this book', edit_book_path(@book) %> |
+<%= link_to 'Overview', books_path %>
