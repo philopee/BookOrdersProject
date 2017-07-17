@@ -1,12 +1,11 @@
 language: ruby
-rvm:
-  - 2.2
-  - jruby
 services:
 - postgresql
 env:
 - DB=postgres
 - DB=sqlite
+before_install:
+   - rvm install 2.2.2
 before_script:
 - psql -c 'create database travis_ci_test;' -U postgres
 script:
