@@ -6,8 +6,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should contain Author" do
-    click_link('PHILO')
-    page.has_content?('ORDER A BOOK')
+    get users_url, params: { user: { id: @user.id, name: @user.name,  noOfBooks: @user.noOfBooks } }
     assert_response :success
   end
 

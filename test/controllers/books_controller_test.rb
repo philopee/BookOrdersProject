@@ -6,8 +6,7 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should contain Book" do
-    click_link('Deine')
-    page.has_content?('Add a Book to the Database')
+    get books_url
     assert_response :success
   end
 
