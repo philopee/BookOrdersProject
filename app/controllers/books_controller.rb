@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  skip_before_action :authorize, only: [:create, :new]
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
