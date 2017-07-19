@@ -3,9 +3,11 @@
 one:
   id: 1
   name: PHILO
+  password_digest: sumit
   noOfBooks: 1
 
 two:
   id: 2
   name: SUMIT
+  password_digest: sumit
   noOfBooks: 5
