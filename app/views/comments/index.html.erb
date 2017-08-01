@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comments</h1>
+
+<ul id="comments">
+  <%= render @comments %>
+</ul>
+
+<br>
+
+<h3>Add a new comment:</h3>
+<%= form_for(@comment, remote: true) do |f| %>
+  <%= f.label :note %>
+  <%= f.text_area :note %>
+  <%= f.submit %>
+<% end %>
