@@ -9,6 +9,7 @@
 
 User.delete_all
 User.create(name: "Philo", password: "sumit", password_confirmation: "sumit")
+User.create(name: "Sumit", password: "sumit", password_confirmation: "sumit")
 
 
 Books.delete_all
